@@ -6,45 +6,93 @@
     android:layout_height="match_parent"
     tools:context="com.curso.android_piano.MainActivity">
 
-    <TextView
+    <LinearLayout
+        style="?attr/buttonBarStyle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/black"
+        android:orientation="horizontal"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.428">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="120dp" />
+        <Button
+            android:id="@+id/Do"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/background_light"
+            android:onClick="onClickBoton"
+            android:text="Do"
+            android:visibility="visible" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="243dp"
-        tools:layout_editor_absoluteY="120dp" />
+        <Button
+            android:id="@+id/Re"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/background_light"
+            android:onClick="onClickBoton"
+            android:text="Re"
+            android:visibility="visible" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="325dp" />
+        <Button
+            android:id="@+id/Mi"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/background_light"
+            android:onClick="onClickBoton"
+            android:singleLine="false"
+            android:text="Mi" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="243dp"
-        tools:layout_editor_absoluteY="325dp" />
+        <Button
+            android:id="@+id/Fa"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/background_light"
+            android:onClick="onClickBoton"
+            android:text="Fa" />
+
+        <Button
+            android:id="@+id/Sol"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/background_light"
+            android:onClick="onClickBoton"
+            android:text="Sol" />
+
+        <Button
+            android:id="@+id/La"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/background_light"
+            android:onClick="onClickBoton"
+            android:text="La" />
+
+        <Button
+            android:id="@+id/Si"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/background_light"
+            android:onClick="onClickBoton"
+            android:text="Si" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
