@@ -17,7 +17,7 @@ import android.view.View.OnClickListener;
 public class MainActivity extends AppCompatActivity implements View.OnTouchListener{
 
     TextView texto;
-    Button Do,Re,Mi,Fa,Sol,La,Si,Dos,Res,Fas,Sols,Las;
+    Button Do,Re,Mi,Fa,Sol,La,Si,Dos,Res,Fas,Sols,Las,Dof;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         Sol = (Button)findViewById(R.id.Sol);
         La = (Button)findViewById(R.id.La);
         Si = (Button)findViewById(R.id.Si);
+        Dof = (Button)findViewById(R.id.Dof);
         Dos = (Button) findViewById(R.id.Dos);
         Res = (Button) findViewById(R.id.Res);
         Fas = (Button) findViewById(R.id.Fas);
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         Sol.setOnTouchListener(this);
         La.setOnTouchListener(this);
         Si.setOnTouchListener(this);
+        Dof.setOnTouchListener(this);
         Dos.setOnTouchListener(this);
         Res.setOnTouchListener(this);
         Fas.setOnTouchListener(this);
@@ -144,6 +146,18 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                     view.setBackgroundTintList(getResources().getColorStateList(R.color.tecla));
                     break;
                 }
+            case R.id.Dof:
+                if (act == MotionEvent.ACTION_DOWN ) {
+                    view.setBackgroundTintList(getResources().getColorStateList(R.color.Pulsacion));
+                    mp = MediaPlayer.create(this, R.raw.dof);
+                    mp.start();
+                    setComplete(mp);
+                    break;
+                }
+                if (act == MotionEvent.ACTION_UP){
+                    view.setBackgroundTintList(getResources().getColorStateList(R.color.tecla));
+                    break;
+                }
             case R.id.Dos:
                 if (act == MotionEvent.ACTION_DOWN ) {
                     view.setBackgroundColor(Color.CYAN);
@@ -204,7 +218,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             }
         return true;
         }
-    
+
     public void setComplete(MediaPlayer mp){
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
